@@ -50,6 +50,12 @@
                     <nav class="mt-2"> <!--begin::Sidebar Menu-->
                         <ul class="nav sidebar-menu flex-column" role="menu">
                             <li class="nav-item">
+                                <a href="{{ route('infokp') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-circle"></i>
+                                    <p>Info KP</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ route('home') }}" class="nav-link">
                                     <i class="nav-icon bi bi-circle"></i>
                                     <p>Data Mahasiswa</p>

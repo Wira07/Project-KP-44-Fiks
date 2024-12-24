@@ -6,6 +6,7 @@ use App\Http\Controllers\KelompokController;
 use App\Http\Controllers\DosenController; // Tambahkan impor untuk DosenController
 use App\Http\Controllers\MitraController; // Tambahkan impor untuk MitraController
 use App\Http\Controllers\StaffController; // Tambahkan impor untuk StaffController
+use App\Http\Controllers\InfokpController; // Tambahkan impor untuk StaffController
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +36,6 @@ Route::get('kelompok', [KelompokController::class, 'index'])->name('kelompok'); 
 Route::get('dosen', [DosenController::class, 'index'])->name('dosen'); // Rute untuk Dosen
 Route::get('mitra', [MitraController::class, 'index'])->name('mitra'); // Rute untuk Mitra
 Route::get('staff', [StaffController::class, 'index'])->name('staff'); // Rute untuk Staff
+Route::get('infokp', [InfokpController::class, 'index'])->name('infokp');
 
 // Route::get('home', [HomeController::class, 'index'])->name('home');
