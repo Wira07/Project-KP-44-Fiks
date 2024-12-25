@@ -4,11 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelompokController;
 use App\Http\Controllers\DosenController; // Tambahkan impor untuk DosenController
+use App\Http\Controllers\InfokelompokController;
 use App\Http\Controllers\MitraController; // Tambahkan impor untuk MitraController
 use App\Http\Controllers\StaffController; // Tambahkan impor untuk StaffController
 use App\Http\Controllers\InfokpController; // Tambahkan impor untuk StaffController
 use App\Http\Controllers\InfoumumController; // Tambahkan impor untuk StaffController
 use App\Http\Controllers\RegisterController; // Tambahkan impor untuk StaffController
+use App\Http\Controllers\InfomhsController; // Tambahkan impor untuk StaffController
+use App\Http\Controllers\InfokpusersController; // Tambahkan impor untuk StaffController
+use App\Http\Controllers\SuratmitraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,11 +30,11 @@ use App\Http\Controllers\RegisterController; // Tambahkan impor untuk StaffContr
 // });
 
 Route::get('/', function () {
-    return view('layouts.login');
+    return view('admin.login');
 });
 
 Route::get('/home', function () {
-    return view('layouts.home');
+    return view('admin.home');
 })->name('home');
 
 Route::post('/home', [HomeController::class, 'index'])->name('home');
@@ -40,6 +44,11 @@ Route::get('mitra', [MitraController::class, 'index'])->name('mitra'); // Rute u
 Route::get('staff', [StaffController::class, 'index'])->name('staff'); // Rute untuk Staff
 Route::get('infokp', [InfokpController::class, 'index'])->name('infokp');
 Route::get('infoumum', [InfoumumController::class, 'index'])->name('infoumum');
-Route::get('register', [RegisterController::class, 'index'])->name('infoumum');
+Route::get('register', [RegisterController::class, 'index'])->name('register');
+Route::get('infokelompok', [InfokelompokController::class, 'index'])->name('infokelompok');
+Route::get('infomhs', [InfomhsController::class, 'index'])->name('infomhs');
+Route::get('infokpusers', [InfokpusersController::class, 'index'])->name('infokpusers');
+Route::get('suratmitra', [SuratmitraController::class, 'index'])->name('suratmitra');
+
 
 // Route::get('home', [HomeController::class, 'index'])->name('home');

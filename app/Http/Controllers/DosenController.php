@@ -8,6 +8,6 @@ class DosenController extends Controller
 {
     public function index()
     {
-        return view('layouts.dosen'); // Mengarahkan ke view layouts/kelompok
+        return view('admin.dosen'); // Mengarahkan ke view layouts/kelompok
     }
 }

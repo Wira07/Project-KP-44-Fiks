@@ -8,6 +8,6 @@ class InfoumumController extends Controller
 {
     public function index()
     {
-        return view('layouts.infoumum'); // Sesuaikan dengan path view
+        return view('admin.infoumum'); // Sesuaikan dengan path view
     }
 }

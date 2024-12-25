@@ -8,6 +8,6 @@ class KelompokController extends Controller
 {
     public function index()
     {
-        return view('layouts.kelompok'); // Mengarahkan ke view layouts/kelompok
+        return view('admin.kelompok'); // Mengarahkan ke view layouts/kelompok
     }
 }

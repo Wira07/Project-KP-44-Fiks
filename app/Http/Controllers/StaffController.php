@@ -8,6 +8,6 @@ class StaffController extends Controller
 {
     public function index()
     {
-        return view('layouts.staff'); // Mengarahkan ke view layouts/kelompok
+        return view('admin.staff'); // Mengarahkan ke view layouts/kelompok
     }
 }

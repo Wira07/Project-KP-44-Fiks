@@ -8,6 +8,6 @@ class MitraController extends Controller
 {
     public function index()
     {
-        return view('layouts.mitra'); // Mengarahkan ke view layouts/kelompok
+        return view('admin.mitra'); // Mengarahkan ke view layouts/kelompok
     }
 }

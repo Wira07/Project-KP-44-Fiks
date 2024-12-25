@@ -10,6 +10,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('layouts.home'); // Sesuaikan dengan path view
+        return view('admin.home'); // Sesuaikan dengan path view
     }
 }

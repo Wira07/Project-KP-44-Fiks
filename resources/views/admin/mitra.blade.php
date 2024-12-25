@@ -44,11 +44,17 @@
                     </ul> <!--end::End Navbar Links-->
                 </div> <!--end::Container-->
             </nav> <!--end::Header--> <!--begin::Sidebar-->
-            <aside class="app-sidebar bg-primary shadow" data-bs-theme="dark"> <!--begin::Sidebar Brand-->
+            <aside class="app-sidebar shadow" data-bs-theme="dark" style="background-color: rgb(0, 0, 58); color: white;"> <!--begin::Sidebar Brand-->
                 <div class="sidebar-brand bg-light"> <!--begin::Brand Link--> <a href="./home.html" class="brand-link"> <!--begin::Brand Image--> <img src="{{url('img/LOGOFKOM.png')}}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> </a> <!--end::Brand Link--> </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
                 <div class="sidebar-wrapper">
                     <nav class="mt-2"> <!--begin::Sidebar Menu-->
                         <ul class="nav sidebar-menu flex-column" role="menu">
+                            <li class="nav-item">
+                                <a href="{{ route('infokp') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-circle"></i>
+                                    <p>Info KP</p>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a href="{{ route('home') }}" class="nav-link">
                                     <i class="nav-icon bi bi-circle"></i>

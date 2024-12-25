@@ -8,6 +8,6 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('layouts.register'); // Mengarahkan ke view layouts/register
+        return view('admin.register'); // Mengarahkan ke view layouts/register
     }
 }
