@@ -13,6 +13,9 @@ use App\Http\Controllers\RegisterController; // Tambahkan impor untuk StaffContr
 use App\Http\Controllers\InfomhsController; // Tambahkan impor untuk StaffController
 use App\Http\Controllers\InfokpusersController; // Tambahkan impor untuk StaffController
 use App\Http\Controllers\SuratmitraController;
+use App\Http\Controllers\InfokpskController;
+use App\Http\Controllers\InfokpsuController;
+use App\Http\Controllers\ValidasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +52,11 @@ Route::get('infokelompok', [InfokelompokController::class, 'index'])->name('info
 Route::get('infomhs', [InfomhsController::class, 'index'])->name('infomhs');
 Route::get('infokpusers', [InfokpusersController::class, 'index'])->name('infokpusers');
 Route::get('suratmitra', [SuratmitraController::class, 'index'])->name('suratmitra');
+Route::get('infokpsk', [InfokpskController::class, 'index'])->name('infokpsk');
+Route::get('infokpsu', [InfokpsuController::class, 'index'])->name('infokpsu');
+Route::get('validasi', [ValidasiController::class, 'index'])->name('validasi');
+// Route::get('logout', [ValidasiController::class, 'index'])->name('logout');
+
 
 
 // Route::get('home', [HomeController::class, 'index'])->name('home');
