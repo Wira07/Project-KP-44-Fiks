@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{url('dist/css/adminlte.min.css')}}" crossorigin="anonymous" />
     <script src="{{url('dist/js/adminlte.min.js')}}" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     
 </head>
 <body>
@@ -60,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('kelompok') }}" class="nav-link active">
+                                <a href="{{ route('kelompok') }}" class="nav-link">
                                     <i class="nav-icon bi bi-circle"></i>
                                     <p>Data Kelompok</p>
                                 </a>

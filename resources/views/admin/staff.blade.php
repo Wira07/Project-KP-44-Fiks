@@ -5,90 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{url('dist/css/adminlte.min.css')}}" crossorigin="anonymous" />
     <script src="{{url('dist/js/adminlte.min.js')}}" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <body class="layout-fixed sidebar-expand-lg bg-body-tertiary"> <!--begin::App Wrapper-->
-        <div class="app-wrapper"> <!--begin::Header-->
-            <nav class="app-header navbar navbar-expand bg-body"> <!--begin::Container-->
-                <div class="container-fluid"> <!--begin::Start Navbar Links-->
-                    <h5 class="brand-text text-dark ms-2 align-middle">PENGELOLAAN DATA KERJA PRAKTEK</h5> <!--end::Brand Text-->
-                    <!-- <ul class="navbar-nav">
-                        <li class="nav-item"> <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"> <i class="bi bi-list"></i> </a> </li>
-                        <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Home</a> </li>
-                        <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Contact</a> </li>
-                    </ul> end::Start Navbar Links begin::End Navbar Links -->
-                    <ul class="navbar-nav ms-auto"> <!--begin::Navbar Search-->
-                        <!--begin::User Menu Dropdown-->
-                        <li class="nav-item dropdown user-menu"> <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <img src="../../dist/assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image"> <span class="d-none d-md-inline">Alexander Pierce</span> </a>
-                            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
-                                <li class="user-header text-bg-primary"> <img src="{{url('img/LOGOFKOM.png')}}" class="rounded-circle shadow" alt="User Image">
+    <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+        <!--begin::App Wrapper-->
+        <div class="app-wrapper">
+            <!--begin::Header-->
+            <nav class="app-header navbar navbar-expand bg-body">
+                <!--begin::Container-->
+                <div class="container-fluid">
+                    <h5 class="brand-text text-dark ms-2 align-middle">PENGELOLAAN DATA KERJA PRAKTEK</h5>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown user-menu">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <img src="../../dist/assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image">
+                                <span class="d-none d-md-inline">Alexander Pierce</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                                <li class="user-header text-bg-primary">
+                                    <img src="{{url('img/LOGOFKOM.png')}}" class="rounded-circle shadow" alt="User Image">
                                     <p>
                                         Alexander Pierce - Web Developer
                                         <small>Member since Nov. 2023</small>
                                     </p>
-                                </li> <!--end::User Image--> <!--begin::Menu Body-->
-                                <li class="user-body"> <!--begin::Row-->
+                                </li>
+                                <li class="user-body">
                                     <div class="row">
-                                        <div class="col-4 text-center"> <a href="#">Followers</a> </div>
-                                        <div class="col-4 text-center"> <a href="#">Sales</a> </div>
-                                        <div class="col-4 text-center"> <a href="#">Friends</a> </div>
-                                    </div> <!--end::Row-->
-                                </li> <!--end::Menu Body--> <!--begin::Menu Footer-->
-                                <li class="user-footer"> <a href="#" class="btn btn-default btn-flat">Profile</a> <a href="#" class="btn btn-default btn-flat float-end">Sign out</a> </li> <!--end::Menu Footer-->
+                                        <div class="col-4 text-center"><a href="#">Followers</a></div>
+                                        <div class="col-4 text-center"><a href="#">Sales</a></div>
+                                        <div class="col-4 text-center"><a href="#">Friends</a></div>
+                                    </div>
+                                </li>
+                                <li class="user-footer">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                                </li>
                             </ul>
-                        </li> <!--end::User Menu Dropdown-->
-                    </ul> <!--end::End Navbar Links-->
-                </div> <!--end::Container-->
-            </nav> <!--end::Header--> <!--begin::Sidebar-->
-            <aside class="app-sidebar shadow" data-bs-theme="dark" style="background-color: rgb(0, 0, 58); color: white;"> <!--begin::Sidebar Brand-->
-                <div class="sidebar-brand bg-light"> <!--begin::Brand Link--> <a href="./home.html" class="brand-link"> <!--begin::Brand Image--> <img src="{{url('img/LOGOFKOM.png')}}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> </a> <!--end::Brand Link--> </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--end::Header-->
+
+            <!--begin::Sidebar-->
+            <aside class="app-sidebar shadow" data-bs-theme="dark" style="background-color: rgb(0, 0, 58); color: white;">
+                <div class="sidebar-brand bg-light">
+                    <a href="./home.html" class="brand-link">
+                        <img src="{{url('img/LOGOFKOM.png')}}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow">
+                    </a>
+                </div>
                 <div class="sidebar-wrapper">
-                    <nav class="mt-2"> <!--begin::Sidebar Menu-->
+                    <nav class="mt-2">
+                        <!--begin::Sidebar Menu-->
                         <ul class="nav sidebar-menu flex-column" role="menu">
                             <li class="nav-item">
                                 <a href="{{ route('infokp') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-info-circle"></i>
                                     <p>Info KP</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('home') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-person-lines-fill"></i>
                                     <p>Data Mahasiswa</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('kelompok') }}" class="nav-link active">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                <a href="{{ route('kelompok') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-people"></i>
                                     <p>Data Kelompok</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('dosen') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-person-badge"></i>
                                     <p>Data Dosen</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('mitra') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-book"></i>
                                     <p>Data Mitra</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('staff') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-briefcase"></i>
                                     <p>Data Staff</p>
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                </div> <!--end::Sidebar Wrapper-->
-            </aside> <!--end::Sidebar--> <!--begin::App Main-->
+                </div>
+            </aside>
+            <!--end::Sidebar-->
+
+            <!--begin::App Main-->
             <main class="app-main">
                 <div class="container-fluid px-5 py-3">
                     <h1>Data Staff</h1>
@@ -125,23 +142,22 @@
                         </tbody>
                     </table>
                     <ul class="pagination pagination-sm m-0 float-end">
-                        <li class="page-item"> <a class="page-link" href="#">«</a> </li>
-                        <li class="page-item"> <a class="page-link" href="#">1</a> </li>
-                        <li class="page-item"> <a class="page-link" href="#">2</a> </li>
-                        <li class="page-item"> <a class="page-link" href="#">3</a> </li>
-                        <li class="page-item"> <a class="page-link" href="#">»</a> </li>
+                        <li class="page-item"><a class="page-link" href="#">«</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">»</a></li>
                     </ul>
                 </div>
             </main>
-            <footer class="app-footer"> <!--begin::To the end-->
-                <!--begin::Copyright--> <strong>
-                    Copyright &copy; 2024&nbsp; Kelompok 44 Kerja Praktek Universitas Kuningan 2024</a>.
+            <footer class="app-footer">
+                <strong>
+                    Copyright &copy; 2024 Kelompok 44 Kerja Praktek Universitas Kuningan.
                 </strong>
                 All rights reserved.
-                <!--end::Copyright-->
-            </footer> <!--end::Footer-->
+            </footer>
         </div>
-    </body><!--end::Body-->
+    </body>
 </body>
 
 </html>

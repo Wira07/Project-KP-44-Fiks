@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{url('dist/css/adminlte.min.css')}}" crossorigin="anonymous" />
     <script src="{{url('dist/js/adminlte.min.js')}}" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,41 +48,42 @@
             <aside class="app-sidebar shadow" data-bs-theme="dark" style="background-color: rgb(0, 0, 58); color: white;"> <!--begin::Sidebar Brand-->
                 <div class="sidebar-brand bg-light"> <!--begin::Brand Link--> <a href="./home.html" class="brand-link"> <!--begin::Brand Image--> <img src="{{url('img/LOGOFKOM.png')}}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> </a> <!--end::Brand Link--> </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
                 <div class="sidebar-wrapper">
-                    <nav class="mt-2"> <!--begin::Sidebar Menu-->
+                    <nav class="mt-2">
+                        <!--begin::Sidebar Menu-->
                         <ul class="nav sidebar-menu flex-column" role="menu">
                             <li class="nav-item">
                                 <a href="{{ route('infokp') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-info-circle"></i> <!-- Ikon untuk Info KP -->
                                     <p>Info KP</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('home') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-person-lines-fill"></i> <!-- Ikon untuk Data Mahasiswa -->
                                     <p>Data Mahasiswa</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('kelompok') }}" class="nav-link active">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                <a href="{{ route('kelompok') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-people"></i> <!-- Ikon untuk Data Kelompok -->
                                     <p>Data Kelompok</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('dosen') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-person-badge"></i> <!-- Ikon untuk Data Dosen -->
                                     <p>Data Dosen</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('mitra') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-book"></i> <!-- Ikon untuk Data Mitra -->
                                     <p>Data Mitra</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('staff') }}" class="nav-link">
-                                    <i class="nav-icon bi bi-circle"></i>
+                                    <i class="nav-icon bi bi-briefcase"></i> <!-- Ikon untuk Data Staff -->
                                     <p>Data Staff</p>
                                 </a>
                             </li>
