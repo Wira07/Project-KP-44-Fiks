@@ -14,37 +14,49 @@
 
     <body class="layout-fixed sidebar-expand-lg bg-body-tertiary"> <!--begin::App Wrapper-->
         <div class="app-wrapper"> <!--begin::Header-->
-            <nav class="app-header navbar navbar-expand bg-body"> <!--begin::Container-->
-                <div class="container-fluid"> <!--begin::Start Navbar Links-->
-                    <h5 class="brand-text text-dark ms-2 align-middle">PENGELOLAAN DATA KERJA PRAKTEK</h5> <!--end::Brand Text-->
-                    <!-- <ul class="navbar-nav">
-                        <li class="nav-item"> <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"> <i class="bi bi-list"></i> </a> </li>
-                        <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Home</a> </li>
-                        <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Contact</a> </li>
-                    </ul> end::Start Navbar Links begin::End Navbar Links -->
-                    <ul class="navbar-nav ms-auto"> <!--begin::Navbar Search-->
+            <nav class="app-header navbar navbar-expand bg-body">
+                <div class="container-fluid">
+                    <h5 class="brand-text text-dark ms-2 align-middle">PENGELOLAAN DATA KERJA PRAKTEK</h5>
+                    <ul class="navbar-nav ms-auto">
                         <!--begin::User Menu Dropdown-->
-                        <li class="nav-item dropdown user-menu"> <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <img src="../../dist/assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image"> <span class="d-none d-md-inline">Alexander Pierce</span> </a>
-                            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
-                                <li class="user-header text-bg-primary"> <img src="{{url('img/LOGOFKOM.png')}}" class="rounded-circle shadow" alt="User Image">
+                        <li class="nav-item dropdown user-menu">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                @if(Auth::check())
+                                <img src="{{ url('img/LOGOFKOM.png') }}" class="user-image rounded-circle shadow" alt="{{ Auth::user()->name }}">
+                                <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
+                                @else
+                                <img src="{{ url('img/avatar.png') }}" class="user-image rounded-circle shadow" alt="Guest">
+                                <span class="d-none d-md-inline">Guest</span>
+                                @endif
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                                <li class="user-header text-bg-primary">
+                                    <img src="{{ url('img/LOGOFKOM.png') }}" class="rounded-circle shadow" alt="User Image">
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2023</small>
+                                        @if(Auth::check())
+                                        {{ Auth::user()->name }} - {{ Auth::user()->role }}
+                                        <small>Member since {{ Auth::user()->created_at->format('M Y') }}</small>
+                                        @else
+                                        Guest
+                                        @endif
                                     </p>
-                                </li> <!--end::User Image--> <!--begin::Menu Body-->
-                                <li class="user-body"> <!--begin::Row-->
-                                    <div class="row">
-                                        <div class="col-4 text-center"> <a href="#">Followers</a> </div>
-                                        <div class="col-4 text-center"> <a href="#">Sales</a> </div>
-                                        <div class="col-4 text-center"> <a href="#">Friends</a> </div>
-                                    </div> <!--end::Row-->
-                                </li> <!--end::Menu Body--> <!--begin::Menu Footer-->
-                                <li class="user-footer"> <a href="#" class="btn btn-default btn-flat">Profile</a> <a href="#" class="btn btn-default btn-flat float-end">Sign out</a> </li> <!--end::Menu Footer-->
+                                </li>
+                                <li class="user-footer">
+                                    @if(Auth::check())
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat float-end"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sign out</a>
+                                    @else
+                                    <a href="{{ route('login') }}" class="btn btn-default btn-flat float-end">Sign in</a>
+                                    @endif
+                                </li>
                             </ul>
-                        </li> <!--end::User Menu Dropdown-->
-                    </ul> <!--end::End Navbar Links-->
-                </div> <!--end::Container-->
-            </nav> <!--end::Header--> <!--begin::Sidebar-->
+                        </li>
+
+                        <!--end::User Menu Dropdown-->
+                    </ul>
+                </div>
+            </nav>
             <aside class="app-sidebar shadow" data-bs-theme="dark" style="background-color: rgb(0, 0, 58); color: white;"> <!--begin::Sidebar Brand-->
                 <div class="sidebar-brand bg-light"> <!--begin::Brand Link--> <a href="{{ route('home') }}" class="brand-link"> <!--begin::Brand Image--> <img src="{{url('img/LOGOFKOM.png')}}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> </a> <!--end::Brand Link--> </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
                 <div class="sidebar-wrapper">
