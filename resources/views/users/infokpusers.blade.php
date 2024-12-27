@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{url('dist/css/adminlte.min.css')}}" crossorigin="anonymous" />
     <script src="{{url('dist/js/adminlte.min.js')}}" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,25 +48,42 @@
             <aside class="app-sidebar shadow" style="background-color: rgb(0, 0, 58); color: white;" data-bs-theme="dark"> <!--begin::Sidebar Brand-->
                 <div class="sidebar-brand bg-light"> <!--begin::Brand Link--> <a href="./home.html" class="brand-link"> <!--begin::Brand Image--> <img src="{{url('img/LOGOFKOM.png')}}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow"> <!--end::Brand Image--> <!--begin::Brand Text--> </a> <!--end::Brand Link--> </div> <!--end::Sidebar Brand--> <!--begin::Sidebar Wrapper-->
                 <div class="sidebar-wrapper">
-                    <nav class="mt-2"> <!--begin::Sidebar Menu-->
+                    <nav class="mt-2">
+                        <!--begin::Sidebar Menu-->
                         <ul class="nav sidebar-menu flex-column" role="menu">
-                            <li class="nav-item"> <a href="{{ route('infokpusers') }}" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                            <li class="nav-item">
+                                <a href="{{ route('infokpusers') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-info-circle"></i> <!-- Ikon untuk Informasi KP -->
                                     <p>Informasi KP</p>
-                                </a> </li>
-                            <li class="nav-item"> <a href="{{ route('infomhs') }}" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('infomhs') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-person-lines-fill"></i> <!-- Ikon untuk Info Mahasiswa -->
                                     <p>Info Mahasiswa</p>
-                                </a> </li>
-                            <li class="nav-item"> <a href="{{ route('infokelompok') }}" class="nav-link active"> <i class="nav-icon bi bi-circle"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('infokelompok') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-people"></i> <!-- Ikon untuk Info Kelompok -->
                                     <p>Info Kelompok</p>
-                                </a> </li>
-                            <li class="nav-item"> <a href="{{ route('suratmitra') }}" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('suratmitra') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-envelope"></i> <!-- Ikon untuk Surat ke Mitra -->
                                     <p>Surat ke Mitra</p>
-                                </a> </li>
-                            <li class="nav-item"> <a href="logout.html" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('login') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-box-arrow-right"></i> <!-- Ikon untuk Logout -->
                                     <p>Logout</p>
-                                </a> </li>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
+
                 </div> <!--end::Sidebar Wrapper-->
             </aside> <!--end::Sidebar--> <!--begin::App Main-->
             <main class="app-main">

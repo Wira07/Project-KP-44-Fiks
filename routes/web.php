@@ -16,6 +16,8 @@ use App\Http\Controllers\SuratmitraController;
 use App\Http\Controllers\InfokpskController;
 use App\Http\Controllers\InfokpsuController;
 use App\Http\Controllers\ValidasiController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +42,11 @@ Route::get('/home', function () {
     return view('admin.home');
 })->name('home');
 
+Route::get('/login', function () {
+    return view('admin.login');
+})->name('login');
+
+
 Route::post('/home', [HomeController::class, 'index'])->name('home');
 Route::get('kelompok', [KelompokController::class, 'index'])->name('kelompok'); // Rute untuk Kelompok
 Route::get('dosen', [DosenController::class, 'index'])->name('dosen'); // Rute untuk Dosen
@@ -55,7 +62,44 @@ Route::get('suratmitra', [SuratmitraController::class, 'index'])->name('suratmit
 Route::get('infokpsk', [InfokpskController::class, 'index'])->name('infokpsk');
 Route::get('infokpsu', [InfokpsuController::class, 'index'])->name('infokpsu');
 Route::get('validasi', [ValidasiController::class, 'index'])->name('validasi');
-// Route::get('logout', [ValidasiController::class, 'index'])->name('logout');
+Route::get('login', [LoginController::class, 'login'])->name('login');
+
+
+Route::post('login', [LoginController::class, 'login'])->name('login.submit');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+// Role-based routes
+Route::middleware(['admin', 'role:admin'])->group(function () {
+    Route::get('/admin/infokp', function () {
+        return view('admin.infokp');
+    })->name('admin.infokp');
+});
+
+Route::middleware(['admin', 'role:staff_umum'])->group(function () {
+    Route::get('/staffumum/infokpsu', function () {
+        return view('staffumum.infokpsu');
+    })->name('staffumum.infokpsu');
+});
+
+Route::middleware(['admin', 'role:staff_keuangan'])->group(function () {
+    Route::get('/staffkeu/infokpsk', function () {
+        return view('staffkeu.infokpsk');
+    })->name('staffkeu.infokpsk');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');
+});
+
+Route::get('/login', function () {
+    return view('auth.login'); 
+})->name('login');
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// });
 
 
 

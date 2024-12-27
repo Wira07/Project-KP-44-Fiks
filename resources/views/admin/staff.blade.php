@@ -99,6 +99,12 @@
                                     <p>Data Staff</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('login') }}" class="nav-link">
+                                    <i class="nav-icon bi bi-box-arrow-right"></i> <!-- Ikon untuk Logout -->
+                                    <p>Logout</p>
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
